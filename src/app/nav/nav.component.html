@@ -1,0 +1,10 @@
+<div class="navContainer">
+    <img src="../../assets/logo.PNG" alt="">
+    <ul>
+        <li routerLink="/annuitée" (click)="activate(0)" [ngClass]="{'active':active[0]}"><span >ANNUITE</span></li>
+        <li routerLink="/capital" (click)="activate(1)" [ngClass]="{'active':active[1]}"><span >CAPITAL</span></li>
+        <li routerLink="/durée" (click)="activate(2)" [ngClass]="{'active':active[2]}"><span >DUREE</span></li>
+        <li routerLink="/credit" (click)="activate(3)" [ngClass]="{'active':active[3]}"><span >CREDIT</span></li>
+    </ul>
+
+</div>

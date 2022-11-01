@@ -1,0 +1,30 @@
+
+
+
+
+<div class="messages">
+    <span class="error" *ngFor="let item of errorMessage">
+         {{item}}
+    </span>
+    <span class="success" *ngFor="let item of successMessage">
+        {{item}}
+   </span>
+</div>
+<div class="containerDisplay">
+    <img class ="background_img" src="../../assets/background.jpeg" alt="">
+    <div class="rowInput">
+        <div>
+            <form [formGroup]="formData" onsubmit="submitAnnuitee()">
+                <div class="rowInput"><span>Capital</span><input type="number" formControlName="capital"></div>
+                <div class="rowInput"><span>Taux</span><input type="number"  formControlName="taux"></div>
+                <div class="rowInput"><span>Durée</span><input type="number"  formControlName="duree"></div>
+            </form>
+
+        </div>
+        <div class="results">
+            <h2>Results are shown here once the button is clicked and the fields are tested </h2>
+            <SPan>{{annuitee}}</SPan>
+        </div>
+    </div>
+    <button (click)="submitAnnuitee()">Calculer & sauvegarder</button>
+    <app-credit *ngIf="formData.touched && formD"  [data]="formD"></app-credit>

@@ -1,0 +1,45 @@
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    align-self: center;
+    background-color: grey;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(5, 74, 194);
+    color: white;
+    text-decoration: none;
+
+
+}
+.active {
+    background-color: #1aace1;
+    cursor: pointer;
+}
+li span {
+    color: white;
+    text-decoration: none;
+}
+
+li:hover {
+    background-color: #1aace1;
+    cursor: pointer;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}

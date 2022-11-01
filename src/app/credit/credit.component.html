@@ -1,0 +1,31 @@
+
+
+    <div *ngIf="data" >
+        <div class="results">
+            <h3> After Saving</h3>
+            <div class="messages">
+                <span class="error" *ngFor="let item of errorMessage">
+                     {{item}}
+                </span>
+                <span class="success" *ngFor="let item of successMessage">
+                    {{item}}
+               </span>
+            </div>
+            <div class="rowInput">
+                <div>
+    
+                    <form [formGroup]="formUser" onsubmit="submitUser()">
+                        <div class="rowInput"><span>Prenom</span><input pattern="[a-zA-Z ]*$" type="text" formControlName="prenom" [minLength]="3" [maxlength]="15"></div>
+                        <div class="rowInput"><span>Nom</span><input type="text"  pattern="[a-zA-Z ]*$" formControlName="nom" [minLength]="3" [maxlength]="15"></div>
+                        <div class="rowInput"><span>Email</span><input type="email" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" formControlName="mail"></div>
+                        <div class="rowInput"><span>Tel</span><input type="text" pattern="[- +()0-9]+" formControlName="tel"></div>
+                        <div class="rowInput"><span>Ville</span><input type="text"  pattern="[a-zA-Z ]*$" formControlName="ville" [minLength]="3" [maxlength]="15"></div>
+                        <div class="rowInput"><span>Adresse</span><input type="text"   formControlName="adresse"></div>
+                    </form>
+        
+                </div>
+        </div>
+        </div>
+        <button type="submit" (click)="submitUser()">Valider le credit avec ce compte</button>
+
+    </div>
